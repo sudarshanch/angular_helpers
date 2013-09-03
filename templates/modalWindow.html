@@ -1,0 +1,26 @@
+<div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="userDeleteModalLabel"
+     aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="dismissModal(dismiss)" aria-hidden="true">×</button>
+        <h3>{{ headerMessage }}</h3>
+    </div>
+    <div class="modal-body">
+        <div class="well well-small">
+            <ul>
+                <li>
+                    {{ bodyMessage }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-link" ng-click="dismissModal(dismiss)">Cancel</button>
+    <span ng-show="modalType == 'delete'">
+        <button class="btn btn-danger" ng-click="changeAction()"><i class="icon-trash"></i> Delete {{ buttonPrefix }}
+        </button>
+    </span>
+    <span ng-show="modalType == 'continue'">
+        <button class="btn btn-primary" ng-click="dismiss()">Continue</button>
+    </span>
+    </div>
+</div>

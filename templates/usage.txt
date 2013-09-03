@@ -1,0 +1,22 @@
+In partials use it like this:
+It needs routeDefaultItems,warningMsg
+   $scope.routeDefaultItems = [
+        {
+            name: 'AAA',
+            path: "/abc/1/"
+        },
+        {
+            name: 'BBB',
+            path: "/bbb/1/"
+        },
+        {
+            name: 'CCC',
+            path: "/ccc/1/"
+        },
+        {
+            name: 'DDD',
+            path: "/ddd/1/"
+        }
+    ];
+
+<select-to-change-route route-options="routeDefaultItems" warning-Message="warningMsg"></select-to-change-route>
